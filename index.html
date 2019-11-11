@@ -5,14 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Avengers Character Search</h1>
-    <button type="button" id="search-btn">Search</button>
+    <header>
+        <h1 class="header bold">Avengers Character Search</h1>
+    </header>
+
+    <main>
+        <form id="searchform" action="superheroes.php" method="GET">
+            <label class="font-size14 bold" for="query">Search by Full Name or Alias</label>
+            <br>
+            <input placeholder="e.g. Captain America or Steve Rogers" type="text" name="query" id="search">
+            <button type="button" id="search-btn" class="bold">Search</button>
+        </form>
+        <div id="result"></div>
 </body>
+
+<script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    !window.jQuery && document.write('<script src="jquery-3.4.1.min.js"><\/script>')
+</script>
 
 </html>
