@@ -3,10 +3,6 @@
 window.onload = () => {
     let search = this.document.getElementById("search-btn");
 
-    this.$("#searchform").submit(function (e) {
-        e.preventDefault();
-    });
-
     search.addEventListener("click", () => {
         this.$.ajax({
             type: "GET",
